@@ -21,7 +21,7 @@ export class HttpGetServiceService {
 		return this.http.get(url, {
 			headers: headers
 		})
-		.map(     response => JSON.parse(response.json().d) )
+		.map(     response => response.json() )
 		.catch(   error => Observable.throw(error || 'Server error') )
 		.finally( () => console.log('Finally httpService') );
 	}  
