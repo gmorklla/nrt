@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<app-navbar (openSideNav)="openIt()"></app-navbar>
+<md-sidenav-container>
+	<md-sidenav mode="side" #sidenav>
+		<app-sidebar></app-sidebar>
+	</md-sidenav>
+	<div class="my-content">
+		<app-dashboard></app-dashboard>
+	</div>
+</md-sidenav-container>
